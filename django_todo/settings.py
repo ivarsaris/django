@@ -29,7 +29,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 't57upki=7eeop127(vq&@by$h1skamdu5rvi8bb@7y^kex&17('
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['localhost',
                 'https://ivar-django-todo.herokuapp.com']

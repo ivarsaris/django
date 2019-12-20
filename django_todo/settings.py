@@ -31,7 +31,8 @@ SECRET_KEY = 't57upki=7eeop127(vq&@by$h1skamdu5rvi8bb@7y^kex&17('
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost']
+ALLOWED_HOSTS = ['localhost',
+                'https://ivar-django-todo.herokuapp.com/']
 
 
 # Application definition

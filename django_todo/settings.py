@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
 import os
+import dj_database_url
 
 # in development workspace, I have set a variable for running the workspace so I don't have to type out the whole command each time.
 from os import path
@@ -42,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'todo',
 ]
 
 MIDDLEWARE = [
@@ -78,12 +80,14 @@ WSGI_APPLICATION = 'django_todo.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
+
+DATABASES = {'default': dj_database_url.parse("postgres://jnnpctlyzgimnv:92d09776bb941e1cd11dcce4dab605be161d5f5fdb91eb6bae29a125060a3f67@ec2-54-217-225-16.eu-west-1.compute.amazonaws.com:5432/dldcne6og6pe4")}
 
 
 # Password validation
